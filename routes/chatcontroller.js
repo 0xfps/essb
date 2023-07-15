@@ -219,9 +219,6 @@ const chatController = async (req, res) => {
  * To return the triggerIndex in the split search, this code goes
  * over all the words in the search and gets the index of the first
  * trigger word found.
- * 
- * This code might be modified soon to return not just only the first one found,
- * but, maybe, work better.
  */
 const getTriggerIndex = (splitSearch) => {
     let i = 0
