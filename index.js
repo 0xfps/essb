@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const namesorter = require("./sorting/namesorter")
 
 require("./db/index")
@@ -8,6 +9,7 @@ const chatRouter = require("./routes/chat")
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 app.get("/", async (req, res) => {
     const names = namesorter.sortNames()
